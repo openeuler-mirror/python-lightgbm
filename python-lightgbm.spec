@@ -1,12 +1,13 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-lightgbm
 Version:	3.2.1
-Release:	1
+Release:	2
 Summary:	LightGBM Python Package
 License:	The MIT License
 URL:		https://github.com/microsoft/LightGBM
 Source0:	https://files.pythonhosted.org/packages/7a/6d/db0f5effd3f7982632111f37fcd2fa386b8407f1ff58ef30b71d65e1a444/lightgbm-3.2.1.tar.gz
 
+BuildRequires:	python3-wheel
 Requires:	python3-wheel
 Requires:	python3-numpy
 Requires:	python3-scipy
@@ -77,5 +78,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Wed May 18 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 3.2.1-2
+- add necessary BuildRequires
+
 * Thu May 27 2021 Python_Bot <Python_Bot@openeuler.org> - 3.2.1-1
 - Package Spec generated
